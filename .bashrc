@@ -49,8 +49,14 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# declares an array with the emojis we want to support
+EMOJIS=(👾 😍 😘 💪 🐙 🐉 🏄)
+
+# selects a random element from the EMOJIS set
+SELECTED_EMOJI=${EMOJIS[$RANDOM % ${#EMOJIS[@]}]};
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]👾\[\033[00m\]\[\033[01;34m\]\w '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]${SELECTED_EMOJI} \[\033[00m\]\[\033[01;34m\]\w\[\033[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}:\w\$ '
 fi
