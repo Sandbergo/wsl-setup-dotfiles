@@ -21,6 +21,7 @@
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
+
 ## 🧐 About <a name = "about"></a>
 An (almost) automatic script for setting up a liveable bash terminal via Ubuntu in Windows Subsystem for Linux, as well as the home for (some of my) dotfiles. 
 
@@ -86,6 +87,8 @@ Install the [Remote - WSL](https://aka.ms/vscode-remote/download/wsl) extension 
 
 ## 🎈 Usage <a name="usage"></a>
 Fork the repository and track your own dotfiles.
+
+<img src="img/wsl.jpg">
 
 ## ✍️ Authors <a name = "authors"></a>
 - Lars Sandberg [@Sandbergo](https://github.com/Sandbergo)
