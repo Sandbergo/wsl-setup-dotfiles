@@ -27,7 +27,7 @@ An (almost) automatic script for setting up a liveable bash terminal via Ubuntu 
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-First, Install DejaVu Sans Mono from nerd fonts, download the Windows Compatible version.
+First, Install DejaVu Sans Mono from nerd fonts, download [the Windows Compatible version](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf).
 
 ### Install WSL
 
@@ -43,6 +43,7 @@ Additionally, if you want to make WSL 2 your default architecture you can do so 
 ```
 wsl --set-default-version 2
 ```
+_Note: Some people have had issues with this step, I'm looking to fix this and any feedback is much appreciated._  
 
 After restarting, install Ubuntu from the [Microsoft Store](https://www.microsoft.com/pt-br/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab) or through the terminal:
 
@@ -61,24 +62,23 @@ Download the latest `.deb` package from the [release page](https://github.com/Pe
 sudo dpkg -i lsd_7.2.0_amd64.deb
 ```
 
-Github CLI:
-Download the latest `.deb` file from the [releases page](https://github.com/cli/cli/releases/)
-and install it via:
-
-```sh
-sudo apt install ./gh_*_linux_amd64.deb
-```
 ### Set up dotfiles
 
-If you already have `Windows 10` and `WSL` installed, run these commands in the bash terminal:
+Run these commands in the bash terminal:
 
 ```
+cd 
 git clone https://github.com/Sandbergo/wsl-setup-dotfiles
 chmod 700 wsl-setup-dotfiles/ -R
 cd wsl-setup-dotfiles
+sudo apt update
 ./install.sh
 ./symlinks.sh
 ```
+
+### Windows Terminal 
+
+Copy the `settings.json` file to the appropriate location in your file system. 
 
 ### Remote - WSL
 
